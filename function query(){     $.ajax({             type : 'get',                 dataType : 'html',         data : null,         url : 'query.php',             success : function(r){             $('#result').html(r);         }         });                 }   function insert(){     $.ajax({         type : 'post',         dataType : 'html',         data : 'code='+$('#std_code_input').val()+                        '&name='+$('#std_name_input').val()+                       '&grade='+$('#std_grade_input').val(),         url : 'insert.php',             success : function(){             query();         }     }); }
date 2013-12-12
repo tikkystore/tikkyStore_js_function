@@ -1,0 +1,40 @@
+function get_query(){
+  var var_name1 = x1;
+  var var_name2 = x2;
+    $.ajax({    
+        type : 'get',        
+        dataType : 'html',
+        data : 'var_name_get1='+var_name+'&var_name_get2='+var_name2,
+        url : 'get_data.php',    
+        success : function(r){
+        /*เมื่อเสร็จแล้วจะให้ทำอะไรต่อ เช่น*/
+           if(data==1){
+            alert(data);
+           }
+           else{
+           alert(data);
+           }
+        }    
+    });                
+}
+
+
+function insert(){
+    $.ajax({
+        type : 'post',
+        dataType : 'html',
+        data : 'code='+$('#std_code_input').val()+ 
+                      '&name='+$('#std_name_input').val()+
+                      '&grade='+$('#std_grade_input').val(),
+        url : 'post_data.php',    
+        success : function(){
+           /*เมื่อเสร็จแล้วจะให้ทำอะไรต่อ เช่น*/
+           if(data==1){
+            alert(data);
+           }
+           else{
+           alert(data);
+           }
+        }
+    });
+}
